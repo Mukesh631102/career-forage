@@ -1,0 +1,19 @@
+<!-- templates/eligibility_checker.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Eligibility Checker</title>
+</head>
+<body>
+  <h2>Check Your Eligibility for Placements</h2>
+  <form method="POST" action="{{ url_for('check_eligibility') }}">
+    <label>CGPA: <input type="number" step="0.01" name="cgpa" required></label><br>
+    <label>Number of Backlogs: <input type="number" name="backlogs" required></label><br>
+    <label>Internship Experience (Yes/No): <input type="text" name="internship" required></label><br>
+    <button type="submit">Check</button>
+  </form>
+  {% if result %}
+    <h3>{{ result }}</h3>
+  {% endif %}
+</body>
+</html>

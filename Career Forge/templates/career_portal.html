@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Career Portal - Career Forge</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <style>
+    body {
+      background-color: #f4f7fc;
+      padding-top: 80px;
+    }
+    .card {
+      transition: transform 0.2s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+    .chat-btn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      z-index: 1000;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="{{ url_for('home') }}">Career Forge</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Main Content -->
+<div class="container">
+  <h2 class="text-center mb-4">Welcome to CareerForge</h2>
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+
+    <!-- Eligibility Checker -->
+    <div class="col">
+      <div class="card h-100 text-center">
+        <div class="card-body">
+          <h5 class="card-title">Eligibility Checker</h5>
+          <p class="card-text">Check your eligibility for upcoming placement drives.</p>
+          <a href="" class="btn btn-primary">Check Now</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Resume Upload -->
+    <div class="col">
+      <div class="card h-100 text-center">
+        <div class="card-body">
+          <h5 class="card-title">Upload Resume</h5>
+          <p class="card-text">Upload and manage your resume securely.</p>
+          <a href="" class="btn btn-success">Upload</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Resume ATS Checker -->
+    <div class="col">
+      <div class="card h-100 text-center">
+        <div class="card-body">
+          <h5 class="card-title">ATS Resume Checker</h5>
+          <p class="card-text">Check your resume against ATS algorithms.</p>
+          <a href="" class="btn btn-warning">Check Resume</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Career Recommendation -->
+    <div class="col">
+      <div class="card h-100 text-center">
+        <div class="card-body">
+          <h5 class="card-title">Career Recommendations</h5>
+          <p class="card-text">Enter your skills and get the right career path suggestions.</p>
+          <a href="" class="btn btn-info">Get Suggestions</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Job Alerts -->
+    <div class="col">
+      <div class="card h-100 text-center">
+        <div class="card-body">
+          <h5 class="card-title">Job Alerts</h5>
+          <p class="card-text">Check latest job alerts posted by your admin.</p>
+          <a href="" class="btn btn-danger">View Alerts</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Chatbot Icon -->
+<a href="{{ url_for('career_dashboard') }}#chat" class="btn btn-primary chat-btn rounded-circle p-3">💬</a>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
